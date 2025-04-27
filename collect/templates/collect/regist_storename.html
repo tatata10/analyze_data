@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>タイトル</title>
+</head>
+<body>
+<p id="test1"></p>
+<div>
+<button type="button" onclick="clickFunction()">
+</div>
+
+{% comment ’以下の2行をコメントアウト’ %}
+<form action="{% url 'index' %}" method="post">
+{% csrf_token %}
+<label for="msg">message: </label>
+<input id="msg" type="text" name="msg">
+<input type="submit" value="click">
+</form>
+{% endcomment %}
+
+<h3>{{error}}<h3>
+
+<form action="{% url 'study' %}" method="post">
+{% csrf_token %}
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="001">
+<input type="submit" value="学習">
+</form>
+
+<form action="{% url 'regist_storename_DB' %}" method="post">
+{% csrf_token %}
+<h3>データの登録 </h3>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="001">
+<input id="storename" type="text" name="storename" placeholder="店名"><br>
+<input type="submit" value="click">
+</form>
+
+<button onclick="location.href='./home'">メニューに戻る</button>
+
+</body>
+</html>

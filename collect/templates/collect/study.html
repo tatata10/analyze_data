@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>タイトル</title>
+</head>
+
+<h3>見出し3</h3>
+<p>段落3</p>
+
+<form action="{% url 'study' %}" method="post">
+{% csrf_token %}
+<h3>設定ごとの確率の入力 </h3>
+<table>
+<tr>
+<th>設定</th>
+<th>機種名</th>
+<th>合算</th>
+<th>BB確率</th>
+<th>RB確率</th>
+</tr>
+<tr>
+<td>設定１</td>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="002">
+<input id="level" type="hidden" name="level"　value="1">
+<td><input id="modelName" type="text" name="modelName"></td>
+<td><input id="allprobablity" type="text" name="allprobablity"></td>
+<td><input id="BBprobablity" type="text" name="BBprobablity"　></td>
+<td><input id="RBprobablity" type="text" name="RBprobablity"　></td>
+</tr>
+<tr>
+<td>設定2</td>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="002">
+<input id="level" type="hidden" name="level"　value="2">
+<td><input id="modelName" type="text" name="modelName"></td>
+<td><input id="allprobablity" type="text" name="allprobablity"></td>
+<td><input id="BBprobablity" type="text" name="BBprobablity"　></td>
+<td><input id="RBprobablity" type="text" name="RBprobablity"　></td>
+</tr>
+<tr>
+<td>設定3</td>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="002">
+<input id="level" type="hidden" name="level"　value="3">
+<td><input id="modelName" type="text" name="modelName"></td>
+<td><input id="allprobablity" type="text" name="allprobablity"></td>
+<td><input id="BBprobablity" type="text" name="BBprobablity"　></td>
+<td><input id="RBprobablity" type="text" name="RBprobablity"　></td>
+</tr>
+<tr>
+<td>設定4</td>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="002">
+<input id="level" type="hidden" name="level"　value="4">
+<td><input id="modelName" type="text" name="modelName"></td>
+<td><input id="allprobablity" type="text" name="allprobablity"></td>
+<td><input id="BBprobablity" type="text" name="BBprobablity"　></td>
+<td><input id="RBprobablity" type="text" name="RBprobablity"　></td>
+</tr>
+<tr>
+<td>設定5</td>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="002">
+<input id="level" type="hidden" name="level"　value="5">
+<td><input id="modelName" type="text" name="modelName"></td>
+<td><input id="allprobablity" type="text" name="allprobablity"></td>
+<td><input id="BBprobablity" type="text" name="BBprobablity"　></td>
+<td><input id="RBprobablity" type="text" name="RBprobablity"　></td>
+</tr>
+<tr>
+<td>設定6</td>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="002">
+<input id="level" type="hidden" name="level"　value="6">
+<td><input id="modelName" type="text" name="modelName"></td>
+<td><input id="allprobablity" type="text" name="allprobablity"></td>
+<td><input id="BBprobablity" type="text" name="BBprobablity"　></td>
+<td><input id="RBprobablity" type="text" name="RBprobablity"　></td>
+</tr>
+</table>
+<br>
+<input type="submit" value="submit">
+</form>
+<br>
+<br>
+<form action="{% url 'home' %}" method="post">
+{% csrf_token %}
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="001">
+<input type="submit" value="戻る">
+</form>
+
+
+</body>
+</html>

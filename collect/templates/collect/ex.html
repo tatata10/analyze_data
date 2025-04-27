@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>タイトル</title>
+</head>
+<body>
+<table>
+{% for row in selectdata %}
+  <tr>
+    
+      <td>{{ row.modelName }}</td>
+  
+  </tr>
+{% endfor %}
+</table>
+
+<p>{{ selectdata.7.modelName }}</p>
+<p>{{ x }}</p>
+
+
+<h2>見出し2</h2>
+<p>段落2</p>
+
+<h3>見出し3</h3>
+<p>段落3</p>
+
+</body>
+</html>

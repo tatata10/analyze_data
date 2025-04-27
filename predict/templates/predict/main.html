@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    
+    <!-- <script src="{% static 'js/angular.min.js' %}"></script> -->
+    <script src="{% static 'js/predict_main.js' %}"></script>
+    <meta name="csrf-token" content="YOUR_CSRF_TOKEN_HERE">
+</head>
+<body ng-app="myApp">
+    <header>
+        <h1>predict</h1>
+    </header>
+    <nav>
+        <!-- ナビゲーションメニュー -->
+    </nav>
+<main ng-controller="myController">
+    <p>{{ message }}</p>
+    <h1>predict</h1>
+    <br>
+    <button onclick="location.href='./index/datalist'">登録データ一覧</button>
+    
+    <form action="{% url 'form' %}" method="post">
+    {% csrf_token %}
+    <h3>並びの回帰分析 </h3>
+    <input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="003">
+    <input id="date1" type="date" name="date1"><br>
+    <input id="date2" type="date" name="date2"><br>
+    <input type="submit" value="click">
+    </form>
+    
+    <form action="{% url 'form' %}" method="post">
+    {% csrf_token %}
+    <h3>ランダムフォレスト </h3>
+    <input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="004">
+    <input id="date1" type="date" name="date1"><br>
+    <input id="date2" type="date" name="date2"><br>
+    <input type="hidden" id="csrf" name="csrfmiddlewaretoken" value="JjAP5uW656Xn9WMLZ3chqT1haPekrHDQil0KOgNpR0WVojLhN4T4Q9N3B2te6CqW">
+    <input type="submit" value="click">
+    </form>
+    <button id="myButton">クリックしてください</button>
+    <p id="display" style="display: none;">クリックされました！</p>
+
+<!-- <script src="{% static 'js/main.js' %}"></script> -->
+</main>
+<footer>
+    <p>&copy; 2024 My Site</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,3 @@
+function clickFunction() {
+        alert('クリックされました。');
+      }

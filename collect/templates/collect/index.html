@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>タイトル</title>
+</head>
+<!--<script src="http://127.0.0.1:8888/collect/static/main.js"></script>-->
+<script>
+    const text ='テックアイエス';
+    
+    document.getElementById(test1).textContent = "aaaa"
+    console.log("aaaaaaaaaaaaa")
+</script>
+
+<body>
+
+{% comment ’以下の2行をコメントアウト’ %}
+<form action="{% url 'index' %}" method="post">
+{% csrf_token %}
+<label for="msg">message: </label>
+<input id="msg" type="text" name="msg">
+<input type="submit" value="click">
+</form>
+{% endcomment %}
+
+
+<a href="https://ana-slo.com/2025-04-26-arrow%e6%b1%a0%e4%b8%8a%e5%ba%97-data/">2025/04/26(土)</a>
+<form action="{% url 'form' %}" method="post">
+{% csrf_token %}
+<h3>出玉データの登録 </h3>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="001">
+<input id="storeName" type="text" name="storeName" placeholder="店名"><br>
+<input id="date" type="date" name="date"><br>
+<label for="msg">URL:</label>
+<input id="msg" type="text" name="url">
+<input type="submit" value="click">
+</form>
+<br>
+<button onclick="location.href='./index/datalist'">登録データ一覧</button>
+
+<form action="{% url 'form' %}" method="post">
+{% csrf_token %}
+<h3>並びの回帰分析 </h3>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="003">
+<input id="date1" type="date" name="date1"><br>
+<input id="date2" type="date" name="date2"><br>
+<input type="submit" value="click">
+</form>
+
+<form action="{% url 'form' %}" method="post">
+{% csrf_token %}
+<h3>ランダムフォレスト </h3>
+<input id="BUTTON_ID" type="hidden" name="BUTTON_ID" value="004">
+<input id="date1" type="date" name="date1"><br>
+<input id="date2" type="date" name="date2"><br>
+<input type="submit" value="click">
+</form>
+<br>
+<br>
+<br>
+<button onclick="location.href='../home'">メニューに戻る</button>
+</body>
+</html>

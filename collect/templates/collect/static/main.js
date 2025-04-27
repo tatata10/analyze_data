@@ -1,0 +1,5 @@
+
+
+function clickFunction() {
+        alert('クリックされました。');
+      }
