@@ -1,0 +1,9 @@
+django
+conf
+requests
+pandas
+openpyxl
+matplotlib
+scikit-learn
+psycopg2
+

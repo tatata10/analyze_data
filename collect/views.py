@@ -39,13 +39,7 @@ def datalist(request):
 
 # 学習のページ表示
 def study(request):
-    BUTTON_ID = request.POST['BUTTON_ID']
-    
-    if BUTTON_ID == "001":
-        return render(request, 'collect/study.html')
-    
-    if BUTTON_ID == "002":
-        return render(request, 'collect/study.html')
+    return render(request, 'collect/study.html')
     
 # 店舗名登録のページ表示
 def regist_storename(request):

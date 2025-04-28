@@ -13,6 +13,6 @@ urlpatterns = [
              path('form',views.form,name='form'),
              path('study',views.study,name='study'),
              #path('excel',views.form,name='excel'),
-             path('admin/', admin.site.urls),
+            #  path('admin/', admin.site.urls),
              re_path(r'mplimage.png', analytics.regression_analysis),
              ]
